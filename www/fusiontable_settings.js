@@ -203,9 +203,9 @@ $.extend(MapsLib, {
         <h4 class="infobox-header">{{row.Name}}</h4> \
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
-            {{row.Facilitytype}}<br> \
-            {{row.OfficialAddress}}</p> \
-			{{row.OfficialMobile}}</p> \
+            	{{row.Facilitytype}}<br> \
+            	{{row.OfficialAddress}}<br>\
+		{{row.OfficialMobile}}<br>\
         {{else}} \
             <p></p><p class="ui-li-desc"> \
             {{row.Facilitytype}}<br> \
@@ -213,7 +213,7 @@ $.extend(MapsLib, {
 			{{row.Operationstatus}}<br> \
             {{row.OfficialAddress}}<br> \
             {{#if row.coordinates}} \
-                <a href="google.navigation:q={{row.coordinates}}" target="_blank">Navigate</button></a><br> \
+                <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
             {{/if}} \
             <a href="tel:1{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
         {{/if}} \
