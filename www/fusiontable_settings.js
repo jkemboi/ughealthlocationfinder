@@ -213,7 +213,7 @@ $.extend(MapsLib, {
 			{{row.Operationstatus}}<br> \
             {{row.OfficialAddress}}<br> \
             {{#if row.coordinates}} \
-                <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
+                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank">Navigate</a><br> \
             {{/if}} \
             <a href="tel:1{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
         {{/if}} \
