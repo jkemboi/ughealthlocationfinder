@@ -199,7 +199,7 @@ $.extend(MapsLib, {
         {{/if}} \
         <div class="entity blue_box {{row.Facilitytype}}"><span id="entity-text">.gov</span></div> \
         <div class="entity red_box {{row.Facilitytype}}"><span id="entity-text">.com</span></div> \
-        <div class="entity orange_box {{row.Facilitytype}}"><span id="entity-text">.Hsp</span></div> \
+        <div class="entity orange_box {{row.Facilitytype}}"><span id="entity-text"><img border="0" src="icon.png" width="25" height="25"></span></div> \
         <h4 class="infobox-header">{{row.Name}}</h4> \
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
@@ -213,7 +213,7 @@ $.extend(MapsLib, {
 			{{row.Operationstatus}}<br> \
             {{row.OfficialAddress}}<br> \
             {{#if row.coordinates}} \
-                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank">Navigate</a><br> \
+                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="15" height="15"></a><br> \
             {{/if}} \
             <a href="tel:1{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
         {{/if}} \
