@@ -126,6 +126,11 @@ $.extend(MapsLib, {
                     ["Any", "", true],
                 ],
              },
+	    { label: "Type of NHIF Cover", type: "dropdown", foreach: "NHIF_Cover",
+                entries: [
+                    ["Any", "", true],
+                ],
+             },
             { label: "Facility Name", type: "text", column: "Name" }
         ]
     },
