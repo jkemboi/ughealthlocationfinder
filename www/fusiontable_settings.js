@@ -214,6 +214,7 @@ $.extend(MapsLib, {
 	    NHIF Cover:{{row.NHIF_Cover}}<br> \
             {{#if row.OfficialAddress}}\
 	        {{row.OfficialAddress}}<br>\
+	    {{/if}} \
             {{#if row.coordinates}} \
                 <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="15" height="15"></a><br> \
             {{/if}} \
