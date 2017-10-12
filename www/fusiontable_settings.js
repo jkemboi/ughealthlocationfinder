@@ -209,9 +209,11 @@ $.extend(MapsLib, {
         {{else}} \
             <p></p><p class="ui-li-desc"> \
             {{row.Facilitytype}}<br> \
-			{{row.Owner}}<br> \
-			{{row.Operationstatus}}<br> \
-            {{row.OfficialAddress}}<br> \
+	    {{row.Owner}}<br> \
+	    Status:{{row.Operationstatus}}<br> \
+	    NHIF Cover:{{row.NHIF_Cover}}<br> \
+            {{#if row.OfficialAddress}}\
+	        {{row.OfficialAddress}}<br>\
             {{#if row.coordinates}} \
                 <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="15" height="15"></a><br> \
             {{/if}} \
