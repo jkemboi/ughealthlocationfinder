@@ -209,8 +209,7 @@ $.extend(MapsLib, {
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
             	{{row.Facilitytype}}<br> \
-            	{{row.OfficialAddress}}<br>\
-		{{row.OfficialMobile}}<br>\
+		{{row.Constituency}}|{{row.Ward}}<br>\
         {{else}} \
             <p></p><p class="ui-li-desc"> \
             {{row.Facilitytype}}<br> \
@@ -223,7 +222,9 @@ $.extend(MapsLib, {
             {{#if row.coordinates}} \
                 <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="15" height="15"></a><br> \
             {{/if}} \
-            <a href="tel:1{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
+	    {{#if row.OfficialMobile}} \
+            	<a href="tel:1{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
+	    {{/if}} \
         {{/if}} \
         </p></div>',
                     
@@ -263,7 +264,7 @@ $.extend(MapsLib, {
         boundsExceededMessage:      "You're currently outside Uasin Gishu County region.    Defaulting to geographical center.",
 
         // use this zoom radius if starting at nearby location
-        nearbyZoomRadius:           "15 miles",
+        nearbyZoomRadius:           "10 miles",
 
         // Snap to nearby zoom radius when user hits "Nearby"?    Options are:
         // true              = always snap to zoom level
