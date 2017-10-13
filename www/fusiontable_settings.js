@@ -204,13 +204,14 @@ $.extend(MapsLib, {
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
             	{{row.Facilitytype}}<br> \
-		{{row.Constituency}}|{{row.Ward}}<br>\
+		{{row.Constituency}} | {{row.Ward}}<br>\
         {{else}} \
             <p></p><p class="ui-li-desc"> \
             {{row.Facilitytype}}<br> \
 	    {{row.Owner}}<br> \
 	    Status:{{row.Operationstatus}}<br> \
 	    NHIF Cover:{{row.NHIF_Cover}}<br> \
+	    Consultation Fee:Kshs.{{row.Consultation_Fee}}<br> \
             {{#if row.OfficialAddress}}\
 	        {{row.OfficialAddress}}<br>\
 	    {{/if}} \
