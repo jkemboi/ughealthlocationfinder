@@ -200,11 +200,11 @@ $.extend(MapsLib, {
         <div class="entity blue_box {{row.Facilitytype}}"><span id="entity-text">.gov</span></div> \
         <div class="entity red_box {{row.Facilitytype}}"><span id="entity-text">.com</span></div> \
         <div class="entity orange_box {{row.Facilitytype}}"><span id="entity-text"><img border="0" src="icon.png" width="25" height="25"></span></div> \
-        <div class="entity orange_box {{row.Facilitytype}}"><a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="15" height="15"></a></span></div> \
+        <div class="entity orange_box {{row.Facilitytype}}"><a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="20" height="20"></a></span></div> \
 	<h4 class="infobox-header">{{row.Name}}</h4> \
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
-            	<h5 class="infobox-subheader">{{row.Facilitytype}}<h5>\
+            	<h6>{{row.Facilitytype}}</h6>\
 		{{row.Constituency}} | {{row.Ward}}<br>\
         {{else}} \
             <p></p><p class="ui-li-desc"> \
