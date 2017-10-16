@@ -203,8 +203,8 @@ $.extend(MapsLib, {
         <h4 class="infobox-header">{{row.Name}}</h4> \
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
-            	<h6>{{row.Facilitytype}}\
-		{{row.Constituency}} | {{row.Ward}}</h6><br>\
+            	{{row.Facilitytype}}<br>\
+		{{row.Constituency}} | {{row.Ward}}<br>\
         {{else}} \
             <p></p><p class="ui-li-desc"> \
             {{row.Facilitytype}}<br> \
