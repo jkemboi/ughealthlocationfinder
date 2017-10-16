@@ -45,7 +45,7 @@ $.extend(MapsLib, {
     templateId:         (MapsLib.templateId == 0) ? 0 : (MapsLib.templateId || 3),
     mapOverlayLayers:   [],
     mapOverlayOrder:    [],
-    map_centroid:       new google.maps.LatLng(37.77, -122.45), // center on SF if all else fails
+    map_centroid:       new google.maps.LatLng(0.511622, 35.282972), // center on SF if all else fails
     defaultZoom:        9,
 
     // markers
@@ -341,8 +341,8 @@ $.extend(MapsLib, {
         }
         if (MapsLib.searchPage.addressAutocomplete != false && !("country" in MapsLib.searchPage.addressAutocomplete))
         {
-            // default to US
-            MapsLib.searchPage.addressAutocomplete.country = "us";
+            // default to Kenya
+            MapsLib.searchPage.addressAutocomplete.country = "ke";
         }
     },
     conformSchema: function() {
@@ -541,7 +541,7 @@ $.extend(MapsLib, {
         });
 
         // request list of columns
-        var qstr = "https://www.googleapis.com/fusiontables/v1/tables/" + MapsLib.fusionTableId + "?maxResults=100&callback=MapsLib.setColumns&key=" + MapsLib.googleApiKey;
+        var qstr = "https://www.googleapis.com/fusiontables/v2/tables/" + MapsLib.fusionTableId + "?maxResults=100&callback=MapsLib.setColumns&key=" + MapsLib.googleApiKey;
         console.log("Query: " + qstr);
         $.ajax({
             url: qstr,
@@ -954,7 +954,7 @@ $.extend(MapsLib, {
         var settings = MapsLib.searchPage;
         if (settings.addressShow)
         {
-            html.push("<label for='search_address'>Address / Intersection:</label>");
+            html.push("<label for='search_address'>Address / Intersection /Your location:</label>");
             html.push("<input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
         }
         if (settings.distanceFilter.entries.length > 0)
