@@ -219,7 +219,7 @@ $.extend(MapsLib, {
             	<a href="tel:+254{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
 	    {{/if}} \
             {{#if row.coordinates}} \
-                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="20" height="20"></a><br> \
+                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank">Directions<img border="0" src="nav.png" width="20" height="20"></a><br> \
             {{/if}} \
 	  {{/if}} \
         </p></div>',
