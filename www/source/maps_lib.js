@@ -9,6 +9,10 @@
  * Licensed under the MIT license.
  * https://github.com/derekeder/FusionTable-Map-Template/wiki/License
  */
+$("#cancel_edit").click(function(){
+        window.open('','_parent',''); 
+        window.close(); 
+    });
 
 var MapsLib = MapsLib || {};
 $.extend(MapsLib, {
