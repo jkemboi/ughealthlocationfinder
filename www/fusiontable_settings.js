@@ -154,10 +154,10 @@ $.extend(MapsLib, {
     
     // This will go in your style block.  Useful if customizing your infoboxes.
     customCSS: " \
-        .infobox-header, .ui-li-desc, #entity-text { font-family: Arial, Calibri, Geneva, sans-serif; white-space:normal;} \
+        .infobox-header, .ui-li-desc, #entity-text { font-family: Arial, Calibri, Geneva, sans-serif; white-space:normal;line-height: 90%} \
         .infobox-subheader { padding-top: 2px; } \
         .infobox-map { width:220px; } \
-        .infobox-header { display:inline; padding-right: 10px; } \
+        .infobox-header { display:inline; padding-right: 2px; padding-bottom: 1px; } \
         .moreinfo { margin-left:5px; min-width:18px; position:absolute; \
                 top:45%; bottom:45%; min-height:18px; } \
         .entity { float:left; font-size:medium; padding:5px; border:1px solid blue; margin:2px 7px 5px 0px; } \
