@@ -15,7 +15,7 @@
 }
 .ui-mobile fieldset,
 .ui-page {
-	padding: 0;
+	padding: 5;
 	margin: 0;
 }
 .ui-mobile a img,
@@ -37,7 +37,7 @@
 .ui-mobile-viewport {
 	margin: 0;
 	overflow-x: visible;
-	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 90%;
 	-ms-text-size-adjust:none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -53,7 +53,7 @@ div.ui-mobile-viewport {
 	top: 0;
 	left: 0;
 	width: 100%;
-	min-height: 100%;
+	min-height: 90%;
 	position: absolute;
 	display: none;
 	border: 0;
