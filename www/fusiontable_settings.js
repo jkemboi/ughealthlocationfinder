@@ -160,7 +160,7 @@ $.extend(MapsLib, {
         .infobox-header { display:inline; padding-right: 2px; padding-bottom: 1px; } \
         .moreinfo { margin-left:5px; min-width:18px; position:absolute; \
                 top:45%; bottom:45%; min-height:18px; } \
-        .entity { float:left; font-size:medium; padding:5px; border:1px solid blue; margin:2px 7px 5px 0px; } \
+        .entity { float:left; font-size:medium; padding:1px; border:1px solid blue; margin:2px 2px 2px 1px; } \
         .entity.blue_box { display: none; background-color: #0060ed; color: white; } \
         .entity.red_box { display: none; background-color: #fb6155; color: white; } \
         .entity.orange_box { background-color: #ff9c00; color: white; } \
