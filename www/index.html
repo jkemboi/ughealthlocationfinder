@@ -122,22 +122,62 @@
 <body onload="onLoad();">
 	
     <!-- Home -->
-	<div data-theme="a" data-role="header"></div>
-    <div data-role="page" id="page-map">
-		<div class='navbar navbar-default navbar-static-top'>
-        <div data-theme="a" data-role="header">
-    <!-- About button -->
-            <a id="about" data-role="button" href=
-            "#page-about" data-icon="info" data-iconpos="left" class=
-            "ui-btn-left">About</a>
-    <!-- Search button -->
-    <a data-role="button" id="search_page"
-            href="#page-search" data-icon=
-            "search" data-iconpos="right" class="ui-btn-right">Search</a>
-            <h3><span id="titlebar">&nbsp;</span></h3>
-        </div>
-		</div>
+	<div data-role="page" id="page-main">
+	<div data-theme="a" data-role="header" data-position="fixed">
+			<h3><br><span id="titlebar">&nbsp;</span></h3>
+	</div>
+	
+	<p align='center'>
+	 <table style="width:100%; margin-left:auto; margin-right:auto; margin-top:auto; margin-bottom:auto;">
+		<tr>
+			<td><a data-role="button" id="search_page"
+            		href="#page-search" data-icon=
+            		"search" data-iconpos="right" style="width:auto; height:50px;"><p align="center">Search</p></a>
+			</td>
+			<td><a data-role="button" id="page-map"
+            		href="#page-map" data-icon=
+            		"location" data-iconpos="right" style="width:auto; height:50px;"><p align="center">View Map</p></a>
+			</td>
+		</tr>
+		<tr>
+			<td><a id="nearby" data-role="button" href="#nearby" data-icon=
+            "location" data-iconpos="right"> <!-- class="ui-btn-left" -->
+            <span id="nearby-name" style="width:auto; height:50px;"><p align="center">Nearby</p></span></a>
+			</td>
+			<td><a data-role="button" href="#page-list" data-icon="bars" id=
+            "list_button" data-iconpos="right" style="width:auto; height:50px;"><p align="center">List</p></a>
+			</td>
+		</tr>
+		<tr>
+			<td><a id="about" data-role="button" href=
+            		"#page-about" data-icon="info" data-iconpos="right" style="width:auto; height:50px;"><p align="center">About</p></a>
+			</td>
+			<td><a data-role="button"   data-icon="door"  data-iconpos="right" style="width:auto; height:50px;"><p align="center">Exit</p></a>
+			</td>
+		</tr>
+	</table>
+	</p>
+	
+	<div data-theme="a" data-role="footer" data-position="fixed">
+		<p style="font-size:11px" align="center">Locate healthcare facilities in Uasin Gishu County<br /><br /></p>
+		
+	</div>
+	</div>
 
+    <div data-role="page" id="page-map">
+	<div class='navbar navbar-default navbar-static-top'>
+        	<div data-theme="a" data-role="header">
+    		<!-- About button -->
+            		<a id="about" data-role="button" href=
+            		"#page-about" data-icon="info" data-iconpos="left" class=
+            		"ui-btn-left">About</a>
+    		<!-- Search button -->
+    			<a data-role="button" id="search_page"
+            		href="#page-search" data-icon=
+            		"search" data-iconpos="right" class="ui-btn-right">Search</a>
+            		<h3><br><span id="titlebar">&nbsp;</span></h3>
+        	</div>
+	</div>
     <!-- Bounds Exceeded popup message -->
         <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c"
          style="max-width:400px;" class="ui-corner-all">
@@ -150,34 +190,31 @@
     <!-- The Map -->
         <div data-role="content" id="map_content" style="">
             <div id="map_canvas" style=
-            "position:absolute;top:50px;bottom:50px;left:5px;right:5px;">
+            "position:absolute;top:42px;bottom:42px;left:0px;right:0px;">
             </div>
         </div>
-
-    <!-- Nearby button -->
+	<!-- bottom navigation bar -->    
 	<div class='navbar navbar-default navbar-static-bottom'>
-        <div data-theme="a" data-role="footer" data-position="fixed"
+    <!-- Nearby button -->
+	 <div data-theme="a" data-role="footer" data-position="fixed"
         style="height:42px">
             <a id="nearby" data-role="button" href="#nearby" data-icon=
             "location" data-iconpos="left" class="ui-btn-left">
-            <span id="nearby-name">Nearby</span></a>
-	<!-- Exit Button -->
-		<div style="width:100%;height:100%;position:absolute;vertical-align:middle;align:center;">
-		<button name="buttonClick" onclick="exitFromApp()">Exit!</button>
-		</div>
+            <span id="nearby-name">Nearby</span><br><br></a>
+
     <!-- List button -->
             <a data-role="button" href="#page-list" data-icon="bars" id=
             "list_button" data-iconpos="right"
             class="ui-btn-right">List</a>
         </div>
-		
-    </div>
 	</div>
+    </div>
+
     <!-- About view -->
     <div data-role="page" id="page-about">
         <div data-theme="a" data-role="header">
-            <a data-role="button" data-icon="arrow-l" data-iconpos=
-            "left" href="#page-map" class="ui-btn-left" id="about_back">Back</a>
+            <br><a data-role="button" data-icon="arrow-l" data-iconpos=
+            "left" href="#page-main" class="ui-btn-left" id="about_back">Back</a>
 
             <h3>About</h3>
         </div>
@@ -189,7 +226,7 @@
     <!-- List view -->
     <div data-role="page" id="page-list">
         <div data-theme="a" data-role="header">
-            <a data-role="button" href="#page-map"
+            <br><a data-role="button" href="#page-map"
             data-icon="arrow-l" data-iconpos="left" class=
             "ui-btn-left" id="list_back">Back</a>
 
@@ -207,7 +244,7 @@
     <!-- Search dialog -->
     <div data-role="page" id="page-search">
         <div data-theme="a" data-role="header">
-            <a data-role="button" href="#page-map"
+            <br><a data-role="button" href="#page-map"
             data-icon="arrow-l" data-iconpos="left" class=
             "ui-btn-left" id="search_back">Back</a>
 
