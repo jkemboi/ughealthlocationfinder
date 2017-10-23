@@ -959,8 +959,9 @@ $.extend(MapsLib, {
         if (settings.addressShow)
         {
             html.push("<label for='search_address'>Address / Intersection /Your location:</label>");
-            html.push("<input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
-        }
+			html.push ("<script>function showPosition(){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(function(position){var positionInfo = ' + position.coords.latitude + ', '+ position.coords.longitude +'; document.getElementById('search_address').innerHTML = positionInfo;}); } else{alert('Sorry, your browser does not support HTML5 geolocation.');}}</script><button type='button' onclick='showPosition();'>Show Position</button><input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
+			// html.push("<input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
+		}
         if (settings.distanceFilter.entries.length > 0)
         {
             html.push("<hr><label for='search_radius'>Within:</label>");
