@@ -134,37 +134,37 @@
 	</div>
 	
 	<div align="center"> <!-- align='center'-->
-	 <table style="width:95%;border-spacing: 6px;"><!-- margin-left:auto; margin-right:auto; margin-top:auto; margin-bottom:auto;-->
+	 <table style="width:90%;border-spacing: 10px;"><!-- margin-left:auto; margin-right:auto; margin-top:auto; margin-bottom:auto;-->
 		<tr>
 			<td style="width:50%"><a data-role="button" id="search_page"
             		href="#page-search" data-icon=
-            		"search" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center">Search</p></a>
+            		"search" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center" style="color:#fff">Search</p></a>
 			</td>
 			<td style="width:50%"><a data-role="button" id="page-map"
             		href="#page-map" data-icon=
-            		"location" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center">View Map</p></a>
+            		"location" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center" style="color:#fff">View Map</p></a>
 			</td>
 		</tr>
 		<tr>
-			<td style="width:50%"><a id="nearby" data-role="button" href="#nearby" href="#page-map" data-icon=
-            "location" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"> 
-            <span id="nearby-name"><p align="center">Nearby</p></span></a>
-			</td>
-			<td style="width:50%"><a data-role="button" href="#page-list" data-icon="bars" id=
-            "list_button" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center">List</p></a>
+			<td colspan=2 style="width:50%">
+		<!-- <a id="nearby" data-role="button" href="#nearby" data-icon="location" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"> -->
+            	<!-- <span id="nearby-name"><p align="center" style="color:#fff">Nearby</p></span></a> -->
+			<!-- </td> -->
+			<!-- <td style="width:50%"> -->
+			<a data-role="button" href="#page-list" data-icon="bars" id="list_button" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center" style="color:#fff">List</p></a>
 			</td>
 		</tr>
 		<tr>
 			<td style="width:50%"><a id="about" data-role="button" href=
-            		"#page-about" data-icon="info" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center">About</p></a>
+            		"#page-about" data-icon="info" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:auto; height:auto;"><p align="center" style="color:#fff">About</p></a>
 			</td>
 			<td style="width:50%">
-			<button name="buttonClick" onclick="exitFromApp()" data-icon="delete" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:100%; height:auto;"><p align="center">Exit!</p></button>
+			<button name="buttonClick" onclick="exitFromApp()" data-icon="delete" data-iconpos="right" style="background-color: #2471A3;border-radius: 12px;width:100%; height:auto;"><p align="center" style="color:#fff">Exit!</p></button>
 			</td>
 		</tr>
 	</table>
 	</div>
-	<div style="color:#2471A3" align="center"><h6><i>@2017 - JKemboi</i></h6></div> 
+	<div style="color:#f00" align="center"><h6><i>@2017 - JKem</i></h6></div> 
 	<!-- <div data-theme="a" data-role="footer" data-position="fixed"> -->
 	<!-- <p style="font-size:11px; background: #34495E;" align="center">Locate healthcare facilities in Uasin Gishu County<br /><br /><br /><br /><br /></p> -->
 	<!-- </div> -->
@@ -172,15 +172,17 @@
 
     <div data-role="page" id="page-map">
 	
-        	<div data-theme="e" data-role="header">
+      <div class='navbar navbar-default navbar-static-top'>
+		<div class="navbar-header">
+			<div data-theme="e" data-role="header" data-position="fixed" data-tap-toggle="false">
 			<!-- Back button -->
-            	<a data-role="button" data-icon="arrow-l" data-iconpos="left" href="#page-main" class="ui-btn-left" id="about_back">Back</a>
-    		<!-- Search button -->
-    			<a data-role="button" id="search_page"
-            		href="#page-search" data-icon=
-            		"search" data-iconpos="right" class="ui-btn-right">Search</a>
-            		<h4><span id="titlebar">&nbsp;</span></h4>
-        	</div>
+				<a data-role="button" data-icon="arrow-l" data-iconpos="left" href="#page-main" class="ui-btn-left" id="about_back">Back</a>
+			<!-- Search button -->
+				<a data-role="button" id="search_page" href="#page-search" data-icon= "search" data-iconpos="right" class="ui-btn-right">Search</a>
+            			<h4><span id="titlebar">&nbsp;</span></h4>
+			</div>
+		</div>
+	</div>
 	
     <!-- Bounds Exceeded popup message -->
         <div data-role="popup" id="popupDialog" data-overlay-theme="e" data-theme="e"
@@ -199,11 +201,11 @@
         </div>
 	<!-- bottom navigation bar -->    
 	
-		<div data-theme="e" data-role="footer" data-position="fixed" style="height:42px">
+	<div data-theme="e" data-role="footer" data-position="fixed" style="height:42px" data-tap-toggle="false" class="ui-btn-active ui-state-persist">
 			<div data-role="navbar">
 				<ul>
 	<!-- Nearby button -->
-				<!-- <li><a id="nearby" data-role="button" href="#nearby" data-icon="location" data-iconpos="right"><span id="nearby-name">Nearby</span></a></li>-->
+				<li><a id="nearby" data-role="button" href="#nearby" data-icon="location" data-iconpos="right"><span id="nearby-name">Nearby</span></a></li>
 	<!-- Home button -->
 				<li><a data-role="button" href="#page-main" data-icon="home" data-iconpos="right">Home</a></li>
 	<!-- List button -->
@@ -216,11 +218,14 @@
 
     <!-- About view -->
     <div data-role="page" id="page-about">
-        <div data-theme="e" data-role="header">
-            <a data-role="button" data-icon="arrow-l" data-iconpos="left" href="#page-main" class="ui-btn-left" id="about_back">Back</a>
-            <h3>About</h3>
-        </div>
-
+        <div class='navbar navbar-default navbar-static-top'>
+		<div class="navbar-header">
+			<div data-theme="e" data-role="header">
+				<a data-role="button" data-icon="arrow-l" data-iconpos="left" href="#page-main" class="ui-btn-left" id="about_back">Back</a>
+				<h3>About</h3>
+			</div>
+		</div>
+	</div>
         <div data-role="content" id="section-about">
         </div>
     </div>
