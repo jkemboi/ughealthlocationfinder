@@ -124,7 +124,10 @@
 </script>
 
 <body onload="onLoad();" background-color="blue">
-	
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    	<div class="statusbar-overlay"></div>
+	<!-- Panels overlay-->
+    	<div class="panel-overlay"></div>
     <!-- Home -->
 	<div data-role="page" id="page-main">
 	<p align="center"><img src="img/logo.png" alt="logo" width="56" height="56"><br></p>
@@ -305,5 +308,8 @@
     });
 
 </script>
+	<script type="text/javascript" src="cordova.js"></script>
+    	<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    	<script type="text/javascript" src="js/my-app.js"></script>
 </body>
 </html>
