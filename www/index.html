@@ -8,7 +8,8 @@
 <head>
     <!-- <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org"> -->
    	<meta charset="utf-8">
-    	<meta id="viewport" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    	<!-- <meta id="viewport" name="viewport">-->
 	<link rel="icon" type="image/png" href="favicon.ico"/>
 	
 	<link rel="stylesheet" href="themes/Bootstrap.css">
@@ -93,41 +94,8 @@
 	
 </head>
 
-<script type="text/javascript">
-//mobile viewport hack
-(function(){
-
-  function apply_viewport(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)   ) {
-
-      var ww = window.screen.width;
-      var mw = 800; // min width of site
-      var ratio =  ww / mw; //calculate ratio
-      var viewport_meta_tag = document.getElementById('viewport');
-      if( ww < mw){ //smaller than minimum size
-        viewport_meta_tag.setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=no, width=' + mw);
-      }
-      else { //regular size
-        viewport_meta_tag.setAttribute('content', 'initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=yes, width=' + ww);
-      }
-    }
-  }
-
-  //ok, i need to update viewport scale if screen dimentions changed
-  window.addEventListener('resize', function(){
-    apply_viewport();
-  });
-
-  apply_viewport();
-
-}());
-</script>
-
-<body onload="onLoad();" background-color="blue">
-	<!-- Status bar overlay for full screen mode (PhoneGap) -->
-    	<div class="statusbar-overlay"></div>
-	<!-- Panels overlay-->
-    	<div class="panel-overlay"></div>
+<body onload="onLoad();">
+	
     <!-- Home -->
 	<div data-role="page" id="page-main">
 	<p align="center"><img src="img/logo.png" alt="logo" width="56" height="56"><br></p>
@@ -174,7 +142,10 @@
 	</div>
 
     <div data-role="page" id="page-map">
-	
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    	<div class="statusbar-overlay"></div>
+	<!-- Panels overlay-->
+    	<div class="panel-overlay"></div>
       <div class='navbar navbar-default navbar-static-top'>
 		<div class="navbar-header">
 			<div data-theme="e" data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="true">
@@ -223,6 +194,10 @@
 
     <!-- About view -->
     <div data-role="page" id="page-about">
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    	<div class="statusbar-overlay"></div>
+	<!-- Panels overlay-->
+    	<div class="panel-overlay"></div>
         <div class='navbar navbar-default navbar-static-top'>
 		<div class="navbar-header">
 			<div data-theme="e" data-role="header">
@@ -238,6 +213,10 @@
 
     <!-- List view -->
     <div data-role="page" id="page-list">
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    	<div class="statusbar-overlay"></div>
+	<!-- Panels overlay-->
+    	<div class="panel-overlay"></div>
         <div data-theme="e" data-role="header">
 	<span class="ui-title"></span>
             <a data-role="button" href="#page-main"
@@ -257,6 +236,10 @@
 
     <!-- Search dialog -->
     <div data-role="page" id="page-search">
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    	<div class="statusbar-overlay"></div>
+	<!-- Panels overlay-->
+    	<div class="panel-overlay"></div>
         <div data-theme="e" data-role="header">
 	<span class="ui-title"></span>
             <a data-role="button" href="#page-main"
