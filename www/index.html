@@ -91,7 +91,27 @@
 		height: 90%;
 	      }
     </style>
-	
+<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="js/jquery.loading.block.js"></script>
+    
+    $(function() {
+        $.loadingBlockShow({
+            imgPath: 'img/default.svg',
+			text: 'jQuery Script Loading ...',
+            style: {
+                position: 'fixed',
+                width: '100%',
+                height: '100%',
+                background: 'rgba(0, 0, 0, .8)',
+                left: 0,
+                top: 0,
+                zIndex: 10000
+            }
+        });
+
+        setTimeout($.loadingBlockHide, 5000);
+    });
+    </script>	
 </head>
 
 <body onload="onLoad();">
