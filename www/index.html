@@ -11,7 +11,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     	<!-- <meta id="viewport" name="viewport">-->
 	<link rel="icon" type="image/png" href="favicon.ico"/>
-	
+<!-- Loading the loader -->
+	<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+    <script src="js/jquery.loading.block.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(function() {
+        $.loadingBlockShow({
+            imgPath: 'img/default.svg',
+			text: 'Loading ...',
+            style: {
+                position: 'fixed',
+                width: '100%',
+                height: '100%',
+                background: 'rgba(0, 0, 0, .8)',
+                left: 0,
+                top: 0,
+                zIndex: 10000
+            }
+        });
+
+        setTimeout($.loadingBlockHide, 3000);
+    });
+    </script>	
 	<link rel="stylesheet" href="themes/Bootstrap.css">
 	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" /> -->
 	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.0.min.css"/>
@@ -91,27 +113,7 @@
 		height: 90%;
 	      }
     </style>
-<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="js/jquery.loading.block.js"></script>
-    <script type="text/javascript" charset="utf-8">
-    $(function() {
-        $.loadingBlockShow({
-            imgPath: 'img/default.svg',
-			text: 'Loading ...',
-            style: {
-                position: 'fixed',
-                width: '100%',
-                height: '100%',
-                background: 'rgba(0, 0, 0, .8)',
-                left: 0,
-                top: 0,
-                zIndex: 10000
-            }
-        });
 
-        setTimeout($.loadingBlockHide, 5000);
-    });
-    </script>	
 </head>
 
 <body onload="onLoad();">
