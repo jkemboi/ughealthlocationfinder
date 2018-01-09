@@ -958,8 +958,8 @@ $.extend(MapsLib, {
         var settings = MapsLib.searchPage;
         if (settings.addressShow)
         {
-            html.push("<label for='search_address'>Address / Intersection /Your location:</label>");
-			html.push ("<script>function showPosition(){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(function(position){var positionInfo = ' + position.coords.latitude + ', '+ position.coords.longitude +'; document.getElementById('search_address').innerHTML = positionInfo;}); } else{alert('Sorry, your browser does not support HTML5 geolocation.');}}</script><button type='button' onclick='showPosition();'>Show Position</button><input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
+            html.push("<body><p>Address /Intersection /My location</p><button onclick='getLocation()'>Pick my position</button><p><script>function getLocation(){if (navigator.geolocation) {navigator.geolocation.getCurrentPosition(showPosition);} else {var x= 'Geolocation is not supported.';}}function showPosition(position) {var x = + position.coords.latitude + ", " + position.coords.longitude;document.getElementsByName('search_address')[0].value= x;}</script><label for='search_address'></label><input type='textbox' name='search_address'></input></body>");
+			//html.push ("<script>function showPosition(){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(function(position){var positionInfo = ' + position.coords.latitude + ', '+ position.coords.longitude +'; document.getElementById('search_address').innerHTML = positionInfo;}); } else{alert('Sorry, your browser does not support HTML5 geolocation.');}}</script><button type='button' onclick='showPosition();'>Show Position</button><input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
 			// html.push("<input class='input-block-level' data-clear-btn='true' id='search_address' placeholder='defaults to map center' type='text' />");
 		}
         if (settings.distanceFilter.entries.length > 0)
