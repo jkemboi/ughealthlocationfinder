@@ -32,9 +32,21 @@
     	<link type="text/css" href="default.css" rel="stylesheet" media="all" /> 
 	<script type="text/javascript" src="cordova.js"></script>
 	<!-- Loading the loader -->
-    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    
+	
+	<script type="text/javascript"">
+		function onLoad()
+       			{
+   			document.addEventListener("deviceready", onDeviceReady, true);
+ 			}
+ 		function exitFromApp()
+  			{
+ 			navigator.app.exitApp();
+ 			}
+    	</script>
+<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="js/jquery.loading.block.js"></script>
-    <script type="text/javascript"">
+    <script type="text/javascript">
     $(function() {
         $.loadingBlockShow({
             imgPath: 'img/default.svg',
@@ -53,18 +65,6 @@
         setTimeout($.loadingBlockHide, 3000);
     });
     </script>
-	
-	<script type="text/javascript">
-		function onLoad()
-       			{
-   			document.addEventListener("deviceready", onDeviceReady, true);
- 			}
- 		function exitFromApp()
-  			{
- 			navigator.app.exitApp();
- 			}
-    	</script>
-
 	
     <style type="text/css">
         .infobox-container {
