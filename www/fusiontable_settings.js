@@ -222,13 +222,9 @@ $.extend(MapsLib, {
 	    Consultation Fee:Kshs.{{row.Consultation_Fee}}<br> \
     </div> \
     <div id="tab-2"> \ 
-	{{#if row.OfficialAddress}}\
-	        {{row.OfficialAddress}}<br>\
-	    {{/if}} \
-	    {{#if row.OfficialMobile}} \
-            	<a href="tel:+254{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
-	    {{/if}} \ 								 
-    </div> \
+	    Address:{{row.OfficialAddress}}<br>\
+	    <a href="tel:+254{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
+     </div> \
     <div id="tab-3">\
     
     </div> \
@@ -238,6 +234,7 @@ $.extend(MapsLib, {
                 <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
             {{/if}} \
     </div> \
+   </div> \
     
                    
     // <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
