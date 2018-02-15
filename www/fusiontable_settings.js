@@ -220,23 +220,15 @@ $.extend(MapsLib, {
 	    Status:{{row.Operationstatus}}<br> \
 	    NHIF Cover:{{row.NHIF_Cover}}<br> \
 	    Consultation Fee:Kshs.{{row.Consultation_Fee}}<br> \
-    </div> \
-    <div id="tab-2"> \ 
-	    Address:{{row.OfficialAddress}}<br>\
+            Address:{{row.OfficialAddress}}<br>\
 	    <a href="tel:+254{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
-     </div> \
-    <div id="tab-3">\
-    
-    </div> \
-    <div id="tab-4"> \
-         {{#if row.coordinates}} \
+            {{#if row.coordinates}} \
                 <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank">Directions<img border="0" src="nav.png" width="20" height="20"></a><br> \
                 <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
             {{/if}} \
     </div> \
-   </div> \
-    
-                   
+   </div>',
+              
     // <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
 	// Infoboxes will also appear (unless blank) on your nearby or search address pins.
     // HTML is OK.  Use "{address}" to denote the entered address for addressPinInfobox.
