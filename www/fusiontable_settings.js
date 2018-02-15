@@ -201,15 +201,7 @@ $.extend(MapsLib, {
         <div class="entity red_box {{row.Facilitytype}}"><span id="entity-text">.com</span></div> \
         <div class="entity orange_box {{row.Facilitytype}}"><span id="entity-text"><img border="0" src="icon.png" width="25" height="25"></span></div> \
         <h3 class="infobox-header">{{row.Name}}</h3> \
-    <div class="tabs"> \
-      <ul>\
-       <li><a href="#tab-1"><span>Welcome</span></a></li> \
-       <li><a href="#tab-2"><span>Address</span></a></li> \
-       <li><a href="#tab-3"><span>Services</span></a></li> \
-       <li><a href="#tab-4"><span>Direction</span></a></li> \
-      </ul> \
-    <div id="tab-1"> \
-       {{#if isListView}} \
+          {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
             	{{row.Facilitytype}}<br>\
 		{{row.SubCountyName}} | {{row.Ward}}<br>\
@@ -220,15 +212,18 @@ $.extend(MapsLib, {
 	    Status:{{row.Operationstatus}}<br> \
 	    NHIF Cover:{{row.NHIF_Cover}}<br> \
 	    Consultation Fee:Kshs.{{row.Consultation_Fee}}<br> \
-            Address:{{row.OfficialAddress}}<br>\
+            {{#if row.OfficialAddress}} \
+                Address:{{row.OfficialAddress}}<br>\
+            {{/if}} \
+            {{#if row.OfficialMobile}} \
 	    <a href="tel:+254{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
+            {{/if}} \
             {{#if row.coordinates}} \
                 <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank">Directions<img border="0" src="nav.png" width="20" height="20"></a><br> \
-                <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
+                <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">Route</i></button></a><br> \
             {{/if}} \
-    </div> \
-   </div>',
-              
+    </div>',
+                 
     // <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
 	// Infoboxes will also appear (unless blank) on your nearby or search address pins.
     // HTML is OK.  Use "{address}" to denote the entered address for addressPinInfobox.
