@@ -245,7 +245,7 @@ $.extend(MapsLib, {
     defaultMapBounds: {
 
         // Use [latitude, longitude] or address
-        center: "Address",
+        center: "{address}",
 
         // "X miles" or "X meters"
         radius: "5 miles"
