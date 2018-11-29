@@ -545,7 +545,7 @@ $.extend(MapsLib, {
         });
 
         // request list of columns
-        var qstr = "https://www.googleapis.com/fusiontables/v2/tables/" + MapsLib.fusionTableId + "?maxResults=100&callback=MapsLib.setColumns&key=" + MapsLib.googleApiKey;
+        var qstr = "https://www.googleapis.com/fusiontables/v2/tables/" + MapsLib.fusionTableId + "?maxResults=200&callback=MapsLib.setColumns&key=" + MapsLib.googleApiKey;
         console.log("Query: " + qstr);
         $.ajax({
             url: qstr,
