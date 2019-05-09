@@ -136,7 +136,7 @@ $.extend(MapsLib, {
     ///////////////////////
 
     // Title bar (including title of website)
-    title: "U.G. County Health Facilities",
+    title: "Uasin Gishu County Health Facilities",
 
     // Contents of the About Page.  You can use "{title}" to insert your title.
     aboutPage: " \
@@ -212,6 +212,7 @@ $.extend(MapsLib, {
 	    Status:{{row.Operationstatus}}<br> \
 	    NHIF Cover:{{row.NHIF_Cover}}<br> \
 	    Consultation Fee:Kshs.{{row.Consultation_Fee}}<br> \
+		Open on Weekends:Kshs.{{row.open_weekends}}<br> \
             {{#if row.OfficialAddress}}\
 	        {{row.OfficialAddress}}<br>\
 	    {{/if}} \
