@@ -158,7 +158,7 @@ $.extend(MapsLib, {
         .infobox-subheader { padding-top: 2px; } \
         .infobox-map { width:220px; } \
         .infobox-header { display:inline; padding-right: 2px; padding-bottom: 1px; } \
-        .moreinfo { margin-left:5px; min-width:18px; position:absolute; \
+        .moreinfo { margin-left:5px; min-width:16px; position:absolute; \
                 top:45%; bottom:45%; min-height:18px; } \
         .entity { float:left; font-size:medium; padding:1px; border:1px solid blue; margin:2px 2px 2px 1px; } \
         .entity.blue_box { display: none; background-color: #0060ed; color: white; } \
@@ -200,13 +200,13 @@ $.extend(MapsLib, {
         <div class="entity blue_box {{row.Facilitytype}}"><span id="entity-text">.gov</span></div> \
         <div class="entity red_box {{row.Facilitytype}}"><span id="entity-text">.com</span></div> \
         <div class="entity orange_box {{row.Facilitytype}}"><span id="entity-text"><img border="0" src="icon.png" width="25" height="25"></span></div> \
-        <h3 class="infobox-header">{{row.Name}}</h3> \
+        <h4 class="infobox-header">{{row.Name}}</h4> \
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
             	{{row.Facilitytype}}<br>\
 		{{row.SubCountyName}} | {{row.Ward}}<br>\
         {{else}} \
-            <p></p><p class="ui-li-desc"> \
+            <p class="ui-li-desc"> \
             {{row.Facilitytype}}<br> \
 	    {{row.Owner}}<br> \
 	    Status:{{row.Operationstatus}}<br> \
@@ -220,7 +220,7 @@ $.extend(MapsLib, {
             	<a href="tel:+254{{row.OfficialMobile}}">{{row.OfficialMobile}}</a></p> \
 	    {{/if}} \
             {{#if row.coordinates}} \
-                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank">Directions<img border="0" src="nav.png" width="20" height="20"></a><br> \
+                <a href="https://www.google.com/maps/dir/?api=1&destination={{row.coordinates}}" target="_blank"><img border="0" src="nav.png" width="20" height="20"></a><br> \
                 <a class="btn" href="google.navigation:q={{row.coordinates}}" target="_blank"><i class="material-icons">&#xe569;</i></button></a><br> \
             {{/if}} \
 	  {{/if}} \
