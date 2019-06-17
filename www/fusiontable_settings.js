@@ -203,7 +203,7 @@ $.extend(MapsLib, {
         <h4 class="infobox-header">{{row.Name}}</h4> \
         {{#if isListView}} \
             <p class="ui-li-desc infobox-subheader"> \
-            	{{row.Facilitytype}}\
+            	{{row.Facilitytype}}- \
 		{{row.SubCountyName}} | {{row.Ward}}\
         {{else}} \
             <p class="ui-li-desc"> \
@@ -211,8 +211,8 @@ $.extend(MapsLib, {
 	    {{row.Owner}}<br> \
 	    Status:{{row.Operationstatus}}<br> \
 	    Level:{{row.Kephlevel}} #Beds:{{row.Beds}}<br>\
-	    {{#if row.comments}}\
-		ratings:{{row.comments}}<br>\
+	    {{#if row.ratings}}\
+		ratings:{{row.ratings}}\
 	    {{/if}}\
 	    NHIF Cover:{{row.NHIF_Cover}}<br> \
 	    Consultation Fee:Kshs.{{row.Consultation_Fee}}<br> \
